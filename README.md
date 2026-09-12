@@ -150,9 +150,9 @@ Gene-level count files from the selected samples were imported into R and combin
 
 The analysis used:
 
-Gene identifiers as rows
-Samples as columns
-Raw integer read counts as input
+- Gene identifiers as rows
+- Samples as columns
+- Raw integer read counts as input
 
 The sample metadata were defined according to the two experimental conditions:
 
@@ -184,11 +184,11 @@ The experimental design was:
 
 DESeq2 was used for:
 
-Library-size normalization
-Estimation of dispersion
-Model fitting
-Wald statistical testing
-Multiple-testing correction
+- Library-size normalization
+- Estimation of dispersion
+- Model fitting
+- Wald statistical testing
+- Multiple-testing correction
 
 The differential expression contrast was:
 
@@ -347,12 +347,12 @@ The analysis extracted the genes contributing most strongly to the enrichment si
 
 The workflow included:
 
-Extraction of GSEA core-enrichment genes
-Conversion of Entrez identifiers to gene symbols
-Identification of genes shared between pathways
-Counting pathway membership
-Integration with differential-expression statistics
-Ranking candidate shared genes
+- Extraction of GSEA core-enrichment genes
+- Conversion of Entrez identifiers to gene symbols
+- Identification of genes shared between pathways
+- Counting pathway membership
+- Integration with differential-expression statistics
+- Ranking candidate shared genes
 
 This provides an additional layer of interpretation beyond pathway-level enrichment.
 
