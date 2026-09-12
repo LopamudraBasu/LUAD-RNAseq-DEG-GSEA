@@ -132,12 +132,13 @@ The sequencing data were processed locally using command-line bioinformatics too
 
 The processing workflow included:
 
-SRA Toolkit for sequencing-data retrieval
-FASTQ generation
-Fastp for quality control and read trimming
-HISAT2 for reference genome alignment
-SAMtools for alignment processing
-featureCounts for gene-level read quantification
+The processing workflow included:
+
+- **SRA Toolkit** — sequencing-data retrieval and FASTQ generation
+- **Fastp** — quality control and read trimming
+- **HISAT2** — reference genome alignment
+- **SAMtools** — alignment processing
+- **featureCounts** — gene-level read quantification
 
 The resulting gene-level count files were used as input for the downstream R analysis.
 
