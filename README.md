@@ -125,7 +125,8 @@ Leading-edge analysis
      │
      ▼
 Shared pathway genes
-1. RNA-seq Data Processing
+```
+## 1. RNA-seq Data Processing
 
 The sequencing data were processed locally using command-line bioinformatics tools.
 
@@ -142,7 +143,7 @@ The resulting gene-level count files were used as input for the downstream R ana
 
 Large sequencing and reference files were intentionally not included in the GitHub repository.
 
-2. Count Matrix Construction
+## 2. Count Matrix Construction
 
 Gene-level count files from the selected samples were imported into R and combined into a single count matrix.
 
@@ -162,7 +163,7 @@ Normal tissue was used as the reference condition.
 The differential expression contrast was:
 
 LUAD vs Normal
-3. Count Filtering
+## 3. Count Filtering
 
 Low-abundance genes were removed before differential expression analysis.
 
@@ -172,7 +173,7 @@ At least 10 counts in at least 4 samples
 
 This reduces the influence of genes with extremely low read counts while retaining genes with sufficient evidence for downstream statistical analysis.
 
-4. Differential Expression Analysis
+## 4. Differential Expression Analysis
 
 Differential expression analysis was performed using DESeq2.
 
@@ -212,7 +213,7 @@ padj < 0.05
 
 Positive log2 fold-change values represent higher expression in LUAD relative to Normal, while negative values represent higher expression in Normal relative to LUAD.
 
-5. Sample-Level Analysis and Visualization
+## 5. Sample-Level Analysis and Visualization
 
 Several visualization approaches were used to evaluate sample-level structure and expression patterns.
 
@@ -250,7 +251,7 @@ Log2 fold-change
 Statistical significance
 Upregulated genes
 Downregulated genes
-6. Gene Annotation
+## 6. Gene Annotation
 
 Ensembl gene identifiers were processed to remove version suffixes before annotation.
 
@@ -261,7 +262,7 @@ AnnotationDbi
 
 The annotated differential-expression results were saved for downstream interpretation.
 
-7. Gene Ontology Enrichment
+## 7. Gene Ontology Enrichment
 
 GO Biological Process enrichment analysis was performed separately for:
 
@@ -276,7 +277,7 @@ Multiple testing was controlled using the Benjamini-Hochberg (BH) method.
 
 Top enriched biological processes were visualized using dot plots.
 
-8. KEGG Over-Representation Analysis
+## 8. KEGG Over-Representation Analysis
 
 KEGG pathway enrichment was performed separately for:
 
@@ -297,7 +298,7 @@ Pathway-gene network plots (cnetplots)
 
 The pathway-gene networks provide a view of the relationships between enriched pathways and the genes contributing to those pathways.
 
-9. KEGG Pathway-Gene Network Analysis
+## 9. KEGG Pathway-Gene Network Analysis
 
 KEGG cnetplots were generated for the enriched upregulated and downregulated pathways.
 
@@ -309,7 +310,7 @@ Gene-level fold-change information
 
 This provides a more detailed view of how individual genes contribute to multiple enriched pathways.
 
-10. Gene Set Enrichment Analysis (GSEA)
+## 10. Gene Set Enrichment Analysis (GSEA)
 
 KEGG GSEA was performed using the complete ranked gene list rather than restricting the analysis to statistically significant DEGs.
 
@@ -321,7 +322,7 @@ The ranked gene list was mapped to Entrez identifiers before GSEA.
 
 The ranking was checked to ensure that the final Entrez-based gene list contained unique identifiers.
 
-11. GSEA Pathway Analysis
+## 11. GSEA Pathway Analysis
 
 Several biologically relevant KEGG pathways were investigated individually using GSEA enrichment plots.
 
@@ -337,7 +338,7 @@ Both positively and negatively enriched pathways were examined based on their no
 
 A positive NES indicates enrichment toward the LUAD end of the ranked gene list, while a negative NES indicates enrichment toward the Normal end.
 
-12. Leading-Edge Analysis
+## 12. Leading-Edge Analysis
 
 Leading-edge/core-enrichment analysis was performed on selected GSEA pathways.
 
@@ -356,7 +357,7 @@ This provides an additional layer of interpretation beyond pathway-level enrichm
 
 Importantly, a gene can contribute to GSEA enrichment even if it does not independently satisfy the predefined DEG cutoff.
 
-13. Key Findings
+## 13. Key Findings
 
 The analysis identified substantial transcriptional differences between LUAD and Normal lung tissue.
 
@@ -382,7 +383,7 @@ Renin secretion
 
 The enrichment results indicate strong differences in proliferative and DNA-repair-associated biological programs between LUAD and Normal tissue, together with changes in signaling-related pathways.
 
-14. Shared Leading-Edge Genes
+## 14. Shared Leading-Edge Genes
 
 The leading-edge analysis identified genes shared across multiple selected pathways.
 
@@ -399,7 +400,7 @@ The analysis also identified shared genes between the cGMP-PKG and Hormone signa
 
 These shared genes were further integrated with differential-expression statistics to prioritize candidate genes contributing to multiple pathway-level signals.
 
-Repository Structure
+## Repository Structure
 LUAD-RNAseq-DEG-GSEA/
 │
 ├── results/
@@ -412,7 +413,7 @@ LUAD-RNAseq-DEG-GSEA/
 │
 ├── README.md
 └── LICENSE
-Results Included
+## Results Included
 
 The repository contains the major outputs generated during the analysis, including:
 
@@ -446,7 +447,7 @@ Shared leading-edge genes
 Shared gene-pathway membership
 Ranked shared leading-edge genes
 Candidate leading-edge genes
-Reproducibility
+## Reproducibility
 
 The complete downstream R analysis is provided in:
 
@@ -480,7 +481,7 @@ Shared leading-edge gene analysis
 
 Large raw sequencing files, alignment files, genome references, and other computationally large files are not included in the repository.
 
-Software and Tools
+## Software and Tools
 Command-Line Tools
 SRA Toolkit
 Fastp
@@ -498,7 +499,7 @@ R Visualization Packages
 ggplot2
 ggrepel
 pheatmap
-Skills Demonstrated
+## Skills Demonstrated
 
 This project demonstrates practical experience in:
 
@@ -521,7 +522,7 @@ GSEA
 Leading-edge analysis
 Reproducible R scripting
 Biological interpretation of transcriptomic data
-Author
+## Author
 
 Lopamudra Basu
 
